@@ -23,7 +23,7 @@ endpoint 100 satoshis will be deposited to your wallet.
 ## Publish the app to the 21 marketplace
 
 Each app in the 21 marketplace requires that there be a manifest file which is not included in this project due to security reasons.
-A sample manifest file can be found (here)[https://21.co/learn/intro-to-21/manifest.yaml] or use the following sample:
+A sample manifest file can be found [here](https://21.co/learn/intro-to-21/manifest.yaml) or use the following sample:
 
 ```yml
 info:

@@ -1,6 +1,7 @@
-import urllib
+import urllib.request
 from bs4 import BeautifulSoup
 import nltk
+import flask
 import networkx as nx
 import numpy as np
 import json
@@ -17,12 +18,13 @@ wallet = Wallet()
 payment = Payment(app, wallet)
 
 def get_html_document(url=''):
-    print url
-
-    html = urllib.urlopen(url).read()
+    with urllib.request.urlopen(url) as response:
+        html = response.read()
 
     print html
     soup = BeautifulSoup(html, 'html.parser')
+
+    soup.exract(['script', 'style'])
 
     # get text
     return soup.get_text()
